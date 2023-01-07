@@ -1,8 +1,10 @@
 import { Client } from '@notionhq/client';
-
+import { NotionToMarkdown } from 'notion-to-md';
 const notion = new Client({
   auth: 'secret_1BAPdEBEqDMt08PJ8bGy3lilqFiS8HF9BxPHWDAJUbz',
 });
+
+const n2m = new NotionToMarkdown({ notionClient: notion });
 export const getAllPublished = async () => {
   const posts = await notion.databases.query({
     database_id: '5fe4b225595942bba15603be1a07bb90',
@@ -40,32 +42,26 @@ const getPageMetaData = post => {
     slug: post.properties.Slug.rich_text[0].plain_text,
   };
 };
-function getToday(datestring) {
-  const months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-  ];
+export const getSinglePost = async slug => {
+  const response = await notion.databases.query({
+    database_id: process.env.DATABASE_ID,
+    filter: {
+      property: 'Slug',
+      formula: {
+        string: {
+          equals: slug,
+        },
+      },
+    },
+  });
 
-  let date = new Date();
+  const page = response.results[0];
+  const metadata = getPageMetaData(page);
+  const mdblocks = await n2m.pageToMarkdown(page.id);
+  const mdString = n2m.toMarkdownString(mdblocks);
 
-  if (datestring) {
-    date = new Date(datestring);
-  }
-
-  const day = date.getDate();
-  const month = months[date.getMonth()];
-  const year = date.getFullYear();
-  let today = `${month} ${day}, ${year}`;
-
-  return today;
-}
+  return {
+    metadata,
+    markdown: mdString,
+  };
+};
