@@ -24,6 +24,35 @@ export const getAllPublished = async () => {
 
   return posts;
 };
+function getToday(datestring) {
+  const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+
+  let date = new Date();
+
+  if (datestring) {
+    date = new Date(datestring);
+  }
+
+  const day = date.getDate();
+  const month = months[date.getMonth()];
+  const year = date.getFullYear();
+  let today = `${month} ${day}, ${year}`;
+
+  return today;
+}
 const getPageMetaData = post => {
   const getTags = tags => {
     const allTags = tags.map(tag => {
@@ -44,7 +73,7 @@ const getPageMetaData = post => {
 };
 export const getSinglePost = async slug => {
   const response = await notion.databases.query({
-    database_id: process.env.DATABASE_ID,
+    database_id: '5fe4b225595942bba15603be1a07bb90',
     filter: {
       property: 'Slug',
       formula: {
