@@ -67,7 +67,8 @@ const getPageMetaData = post => {
     title: post.properties.Name.title[0].plain_text,
     tags: getTags(post.properties.Tags.multi_select),
     description: post.properties.Description.rich_text[0].plain_text,
-    date: getToday(post.properties.Date.last_edited_time),
+    date: getToday(post.properties.Date.date.start),
+    edited: getToday(post.properties.Date.last_edited_time),
     slug: post.properties.Slug.rich_text[0].plain_text,
   };
 };
