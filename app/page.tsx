@@ -1,92 +1,33 @@
-import Image from 'next/image'
+import Image from 'next/image';
 import './globals.css';
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
+import coding from '../public/coding.svg';
+import Link from 'next/link';
+import { Inter } from '@next/font/google';
+import styles from './page.module.css';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
+    <main className="min-h-screen mt-28 text-white flex w-11/12 justify-center my-0 mx-auto">
+      <div className="flex mt-4 flex-col w-8/12">
+        <p className="text-xl">Welcome to my personal website! </p>
+        <p className="text-2xl mt-4 ">
+          Here you can read my thoughts on software engineering and technology, as well as learn about my background and
+          experience in the field.
         </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+        <p className="text-2xl">Thank you for visiting!</p>
+        <Link href={'/blog'}>
+          <div className="mt-4">
+            <button className="mt-4 text-black bg-orange-400 w-48 h-12  rounded-3xl hover:brightness-90">
+              Read the lastest posts
+            </button>
+          </div>
+        </Link>
+        <div className="mt-4 flex items-end justify-end">
+          <Image width={200} height={200} src={coding} alt={'man sitted coding'} />
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
       </div>
     </main>
-  )
+  );
 }

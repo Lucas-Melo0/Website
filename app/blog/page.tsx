@@ -6,7 +6,6 @@ import { AiOutlineCalendar, AiOutlineUser } from 'react-icons/ai';
 export default async function Page() {
   const posts = await getAllPublished();
   const results: any = posts.results;
-  console.log(results[1]);
   return (
     <div className="min-h-screen bg-gray-900 ">
       <div className="w-5/12 mx-auto gap-y-3   mt-20 flex flex-col items-start">
