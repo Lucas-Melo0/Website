@@ -1,7 +1,8 @@
 import Link from 'next/link';
+
 export default function Header() {
   return (
-    <header className="bg-gray-900 text-white py-4  border-b-2 border-gray-800 ">
+    <header className="bg-gray-900 text-white py-4  border-b-2 border-gray-800 dark:bg-white">
       <div className="pl-4 pr-4 flex flex-row items-center justify-between">
         <div>
           <Link href="/">

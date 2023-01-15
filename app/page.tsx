@@ -17,13 +17,13 @@ export default function Home() {
           experience in the field.
         </p>
         <p className="text-2xl">Thank you for visiting!</p>
-        <Link href={'/blog'}>
-          <div className="mt-4">
-            <button className="mt-4 text-black bg-orange-400 w-48 h-12  rounded-3xl hover:brightness-90">
+        <div className="mt-4">
+          <Link href={'/blog'}>
+            <button className="text-black bg-orange-400 w-48 h-12  rounded-3xl hover:brightness-90">
               Read the lastest posts
             </button>
-          </div>
-        </Link>
+          </Link>
+        </div>
         <div className="mt-4 flex items-end justify-end">
           <Image width={200} height={200} src={coding} alt={'man sitted coding'} />
         </div>
