@@ -1,4 +1,6 @@
+'use client';
 import Link from 'next/link';
+import { handleMode } from '../aux/mode';
 
 export default function Header() {
   return (
@@ -24,7 +26,7 @@ export default function Header() {
           </Link>
         </nav>
         <div>
-          <button>darkmode</button>
+          <button onClick={handleMode}>darkmode</button>
         </div>
       </div>
     </header>
