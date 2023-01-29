@@ -18,13 +18,13 @@ export default function Header() {
         </div>
         <nav className="flex justify-center">
           <Link
-            className="px-4 py-2 font-bold text-sm hover:text-teal-400 rounded-l-full tracking-wide bg-gray-800 "
+            className="px-4 py-2 font-bold text-sm hover:text-teal-400 border-y border-slate-700 rounded-l-full tracking-wide bg-gray-800 dark:bg-white "
             href="/about"
           >
             About
           </Link>
           <Link
-            className="px-4 py-2 font-bold text-sm rounded-r-full tracking-wide bg-gray-800 hover:text-teal-400"
+            className="px-4 py-2 font-bold text-sm rounded-r-full border-y border-slate-700 tracking-wide bg-gray-800 hover:text-teal-400 dark:bg-white"
             href="/blog"
           >
             Blog
