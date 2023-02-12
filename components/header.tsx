@@ -31,7 +31,7 @@ export default function Header() {
           </Link>
         </nav>
         <div className="flex items-center justify-center border-2 border-gray-800 h-8 w-8  rounded-full">
-          <button onClick={handleMode}>
+          <button aria-label="Darkmode button" onClick={handleMode}>
             {isDark && <BsSun onClick={() => setMode('light')} />}
             {isLight && <BsMoon onClick={() => setMode('dark')} />}
           </button>
