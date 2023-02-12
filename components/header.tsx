@@ -9,22 +9,22 @@ export default function Header() {
   const isDark = mode === 'dark';
   const isLight = mode === 'light';
   return (
-    <header className="bg-gray-900 text-white py-4  border-b-2 border-gray-800 dark:bg-white dark:text-black">
+    <header className="bg-white text-black py-4  border-b-2 border-gray-800 dark:bg-gray-900 dark:text-white">
       <div className="pl-4 pr-4 flex flex-row items-center justify-between">
         <div>
           <Link href="/">
-            <span className="text-xl font-semibold dark:text-black">Lucas Melo</span>
+            <span className="text-xl font-semibold dark:text-white">Lucas Melo</span>
           </Link>
         </div>
         <nav className="flex justify-center">
           <Link
-            className="px-4 py-2 font-bold text-sm hover:text-teal-400 border-y border-slate-700 rounded-l-full tracking-wide bg-gray-800 dark:bg-white "
+            className="px-4 py-2 font-bold text-sm hover:text-teal-400 border-y border-slate-700 rounded-l-full tracking-wide bg-white dark:bg-gray-800"
             href="/about"
           >
             About
           </Link>
           <Link
-            className="px-4 py-2 font-bold text-sm rounded-r-full border-y border-slate-700 tracking-wide bg-gray-800 hover:text-teal-400 dark:bg-white"
+            className="px-4 py-2 font-bold text-sm rounded-r-full border-y border-slate-700 tracking-wide bg-white hover:text-teal-400 dark:bg-gray-800"
             href="/blog"
           >
             Blog
