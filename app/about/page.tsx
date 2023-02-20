@@ -4,13 +4,8 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 dark:text-white">
       <div className="w-5/12 mx-auto mx-auto">
-        <div className="flex flex-col items-center justify-center ">
-          <h1 className="text-xl font-bold mt-2">About</h1>
-          <div className="w-32 mt-2">
-            <Image className="rounded-full object-fit" src={profilePic} alt="Picture of the author" />
-          </div>
-        </div>
-        <div className="flex flex-col items-center justify-center p-5 ">
+        <div className="flex flex-col items-start justify-center "></div>
+        <div className="flex flex-col items-start justify-center p-5 ">
           <h1>Hi there!</h1>
           <h2>
             I am Lucas Melo, a Software Engineer from Brazil. I am passionate about creating software that simplifies
@@ -18,7 +13,7 @@ export default function Page() {
           </h2>
         </div>
         <div className="flex flex-row p-5 gap-x-4">
-          <div className="bg-gradient-to-r from-gray-400 to-gray-400 bg-no-repeat bg-center bg-[size:1px_100%] bg-cover">
+          <div className="bg-gradient-to-r from-gray-400 to-gray-400 bg-no-repeat bg-center bg-[size:0.5px_100%] bg-cover">
             <div className="w-3.5 h-3.5 rounded-full bg-gray-400"></div>
           </div>
           <div className="flex flex-col items-start">
@@ -41,7 +36,7 @@ export default function Page() {
           </div>
         </div>
         <div className="flex flex-row p-5 gap-x-4">
-          <div className="bg-gradient-to-r from-gray-400 to-gray-400 bg-no-repeat bg-center bg-[size:1px_100%] bg-cover">
+          <div className="bg-gradient-to-r from-gray-400 to-gray-400 bg-no-repeat bg-center bg-[size:0.5px_100%] bg-cover">
             <div className="w-3.5 h-3.5 rounded-full bg-gray-400"></div>
           </div>
           <div className="flex flex-col items-start">
@@ -53,7 +48,7 @@ export default function Page() {
           </div>
         </div>
         <div className="flex flex-row p-5 gap-x-4">
-          <div className="bg-gradient-to-r from-gray-400 to-gray-400 bg-no-repeat bg-center bg-[size:1px_100%] bg-cover">
+          <div className="bg-gradient-to-r from-gray-400 to-gray-400 bg-no-repeat bg-center bg-[size:0.5px_100%] bg-cover">
             <div className="w-3.5 h-3.5 rounded-full bg-gray-400"></div>
           </div>
           <div className="flex flex-col items-start">
@@ -65,7 +60,7 @@ export default function Page() {
           </div>
         </div>
         <div className="flex flex-row p-5 gap-x-4">
-          <div className="bg-gradient-to-r from-gray-400 to-gray-400 bg-no-repeat bg-center bg-[size:1px_100%] bg-cover">
+          <div className="bg-gradient-to-r from-gray-400 to-gray-400 bg-no-repeat bg-center bg-[size:0.5px_100%] bg-cover">
             <div className="w-3.5 h-3.5 rounded-full bg-gray-400"></div>
           </div>
           <div className="flex flex-col items-start">
