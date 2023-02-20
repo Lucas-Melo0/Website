@@ -8,6 +8,7 @@ export default function Header() {
   const [mode, setMode] = useState<'dark' | 'light'>('dark');
   const isDark = mode === 'dark';
   const isLight = mode === 'light';
+  handleMode();
   return (
     <header className="bg-white text-black py-4  border-b-2 border-gray-800 dark:bg-gray-900 dark:text-white">
       <div className="pl-4 pr-4 flex flex-row items-center justify-between">
